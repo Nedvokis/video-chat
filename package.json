@@ -3,13 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "cross-env NODE_ENV=production node server.js",
+    "lint": "eslint --ext .js --ignore-path .gitignore .",
+    "lint-fix": "eslint --fix --ext .js --ignore-path .gitignore ."
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
+    "axios": "^0.19.2",
+    "cross-env": "^7.0.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.15",
     "next": "9.3.1",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0"
+  },
+  "devDependencies": {
+    "css-loader": "^3.4.2",
+    "file-loader": "^5.0.2",
+    "node-sass": "^4.13.0",
+    "styled-jsx-plugin-sass": "^1.0.0"
   }
 }

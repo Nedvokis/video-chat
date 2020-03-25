@@ -1,0 +1,76 @@
+@import 'style/global.scss';
+
+.wrapper{
+	margin-top: 10vh;
+	display: flex;
+	flex-direction: column;
+	.header{
+		h1{
+			color: #000;
+			text-align: center;
+			font-size: 1.5rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			@media screen and (max-width: 600px){
+				margin: 0px;
+				font-size: 1.3rem;
+			}
+		}
+	}
+	.content{
+		width: 80%;
+		max-width: 1400px;
+		margin: auto;
+		@media screen and (max-width: 820px){
+			max-width: 100%;
+			width: 100%;
+		}
+		section{
+			.section_header{
+				font-size: 1.4rem;
+				font-weight: bold;
+				margin: 5vh 0px 2vh;
+				padding-left: 10px;
+				border-left: 5px solid $dark;
+			}
+			.container_cards{
+				grid-template-columns: repeat(5, 1fr);
+				grid-gap: 15px;
+				@media screen and (max-width: 600px){
+					grid-template-columns: 1fr;
+					width: 80%;
+					margin: auto;
+				}
+				.card{
+					height: 400px;
+					width: 100%;
+					grid-template-rows: 280px auto auto;
+					box-shadow: 0px 0px 10px $bg_dark;
+					cursor: pointer;
+					transition: .3s;
+					&:hover{
+						box-shadow: 0px 0px 20px $bg_dark;
+					}
+					.card_img{
+						height: 100%;
+						width: 100%;
+						background-repeat: no-repeat;
+						background-position: top;
+						background-size: cover;
+					}
+					.card_full_name{
+						margin: 1vh 0px;
+						font-size: 1.1rem;
+						font-weight: bold;
+						width: 90%;
+					}
+					.card_position{
+						font-size: 1.1rem;
+						margin-bottom: 1vh;
+						width: 90%;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,105 @@
+@import 'style/global.scss';
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    .header{
+		margin: 20px;
+        h1{
+            color: #000;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            @media screen and (max-width: 600px){
+                margin: 0px;
+                font-size: 1.3rem;
+            }
+        }
+    }
+    .content{
+        .option{
+            grid-template-columns: repeat(2, 1fr);
+            max-width: 600px;
+            @media screen and (max-width: 600px){
+                width: 90%;
+            }
+            button{
+                padding-bottom: 5px;
+                border-bottom: 2px solid $light_gray;
+                font-size: 1.3rem;
+                text-transform: uppercase;
+                transition: .3s;
+                @media screen and (max-width: 600px) {
+                    font-size: 1rem;
+                    align-self: end;
+                }
+                &:hover{
+                    border-color: $dark_gray;
+                }
+            }
+            .active{
+                border-bottom: 2px solid $dark_gray;
+            }
+        }
+        .head-office-geo{
+            margin-top: 2vh;
+            font-size: 1.3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            @media screen and (max-width: 720px) {
+                font-size: 1.2rem;
+            }
+
+            svg{
+                margin-right: 8px;
+            }
+        }
+        .container{
+            max-width: 600px;
+            margin: 1vh auto;
+            min-height: 60vh;
+            justify-items: start;
+            @media screen and (max-width: 600px){
+                width: 90%;
+                min-height: auto;
+            }
+            .item{
+                font-size: 1.2rem;
+                border-bottom: 2px solid $light_gray;
+                padding-bottom: 1vh;
+                @media screen and (max-width: 600px){
+                    grid-template-columns: repeat(1, 1fr) !important;
+                }
+                .name{
+                    justify-self: start;
+                    @media screen and (max-width: 600px){
+                        justify-self: center;
+                        margin: 1vh auto;
+                        text-align: center;
+                    }
+                }
+                .address{
+                    width: 80%;
+                    display: grid;
+
+                    @media screen and (max-width: 600px){
+                        justify-self: center;
+                        margin: 1vh auto;
+                        text-align: center;
+                    }
+                }
+                a{
+                    color: $dark;
+                    @media screen and (max-width: 600px){
+                        margin: 1vh auto;
+                    }
+                }
+            }
+        }
+    }
+}

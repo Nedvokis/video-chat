@@ -1,0 +1,124 @@
+@font-face {
+	font-family: 'TTNorms';
+	src: url('/fonts/TT_Norms/TTNorms-Regular.otf');
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'TTNorms-light';
+	src: url('/fonts/TT_Norms/TTNorms-Light.otf');
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'TTNorms-extra-light';
+	src: url('/fonts/TT_Norms/TTNorms-ExtraLight.otf');
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: 'TTNorms-bold';
+	src: url('/fonts/TT_Norms/TTNorms-Bold.otf');
+	font-style: normal;
+	font-display: swap;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	border: none;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+body{
+	font-family: TTNorms;
+	font-size: 14px;
+}
+button, a{
+	background: none;
+	color: inherit;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	text-decoration: none;
+	cursor: pointer;
+}
+.b24-widget-button-position-bottom-right{
+	right: 10px !important;
+	bottom: 75px !important;
+}
+.plan-wrapper div#pr{
+	background: #ffffff !important;
+}
+
+.wrapper .content .container .section .section_text a{
+		color: #000000;
+		font-weight: bold;
+		cursor: pointer;
+}
+
+.wrapper .content .container .section .section_text a:hover{
+		border-bottom: 1px solid #000000;
+}
+
+.grid_center{
+	width: 100%;
+	display: grid;
+	justify-items: center;
+	-webkit-box-align: center;
+	align-items: center;
+}
+
+.col_1{
+	width: 100%;
+	height: auto;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	grid-template-columns: repeat(1, 1fr);
+	grid-gap: 5px;
+}
+.col_2{
+	width: 100%;
+	height: auto;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 5px;
+	@media screen and (max-width: 540px){
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+.col_3{
+	width: 100%;
+	height: auto;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 5px;
+	@media screen and (max-width: 540px){
+		grid-template-columns: repeat(1, 1fr);
+	}
+}
+.col_6{
+	width: 100%;
+	height: auto;
+	display: grid;
+	justify-items: center;
+	align-items: center;
+	grid-template-columns: repeat(6, 1fr);
+	grid-gap: 5px;
+	@media screen and (max-width: 768px){
+		grid-template-columns: repeat(3, 1fr);
+	}
+	@media screen and (max-width: 540px){
+		grid-template-columns: repeat(1, 1fr);
+	}
+}

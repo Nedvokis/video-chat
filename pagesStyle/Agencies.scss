@@ -1,0 +1,73 @@
+@import 'style/global.scss';
+
+.wrapper{
+	.content{
+		.img{
+			width: 50%;
+			margin-top: 15vh;
+			@media screen and (max-width: 600px){
+				width: 90%;
+			}
+			img{
+				width: 100%;
+				height: auto;
+			}
+		}
+		.text{
+			margin: 5vh 0px;
+			max-width: 900px;
+			@media screen and (max-width: 600px){
+				width: 90%;
+			}
+			.sub_header{
+				font-size: 1.4rem;
+				font-weight: bold;
+				text-align: center;
+				margin-bottom: 1vh;
+				@media screen and (max-width: 600px){
+					font-size: 1.2rem;
+				}
+			}
+			p{
+				font-size: 1.3rem;
+				@media screen and (max-width: 600px){
+					font-size: 1.1rem;
+				}
+				a{
+					color: $dark;
+					font-weight: bold;
+					&.phone{
+						border-bottom: 1px dashed #000000;
+					}
+				}
+			}
+			li{
+				margin-left: 4vw;
+				font-size: 1.3rem;
+				margin-top: 2vh;
+				margin-bottom: 2vh;
+				@media screen and (max-width: 600px){
+					font-size: 1.1rem;
+				}
+			}
+		}
+		.agencies-lk{
+			margin-bottom: 5vh;
+
+			a{
+				color: black;
+				width: auto;
+				padding: 12px 26px;
+				border: 1px solid black;
+				transition: 0.3s;
+				cursor: pointer;
+				text-transform: uppercase;
+				font-weight: bold;
+
+				&:hover{
+					box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.65);
+				}
+			}
+		}
+	}
+}
